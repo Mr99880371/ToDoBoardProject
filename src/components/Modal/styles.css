@@ -1,0 +1,48 @@
+.modal-overlay {
+    @apply fixed inset-0 bg-black/30 flex justify-center items-center z-50;
+  }
+  
+  .modal-content {
+    @apply bg-white rounded-2xl p-8 w-full max-w-md relative;
+  }
+  
+  .modal-close {
+    @apply absolute -top-12 left-1/2 -translate-x-1/2 bg-white rounded-full w-10 h-10 flex justify-center items-center shadow-md border-none cursor-pointer text-xl;
+  }
+  
+  .modal-title {
+    @apply text-xl font-semibold text-gray-800 text-left;
+  }
+  
+  .modal-subtitle {
+    @apply text-sm text-gray-500 mb-4 text-left;
+  }
+  
+  .modal-form {
+    @apply flex flex-col gap-2;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-2 mb-2 border border-gray-300 rounded-full outline-none transition-colors focus:ring-2 focus:ring-blue-500;
+  }
+  
+  .textarea-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-xl resize-none h-24 outline-none focus:ring-2 focus:ring-blue-500;
+  }
+
+  .shields-label {
+    @apply block text-sm font-medium text-gray-600 mb-1 text-left;
+  }
+  
+  .submit-button {
+    @apply w-full bg-[#4169e1] text-white font-semibold py-2 rounded-full cursor-pointer transition-colors hover:bg-[#274bb7];
+  }
+  .error-text {
+    @apply text-red-500 text-sm;
+  }
+  .input-error {
+    @apply border-red-500;
+  }
+  
+  
+  

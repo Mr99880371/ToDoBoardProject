@@ -1,0 +1,15 @@
+.header-container {
+  @apply bg-white shadow-md p-4 m-4 mb-1 rounded-xl;
+}
+
+.header-content {
+  @apply flex justify-start items-center space-x-4 mx-auto;
+}
+
+.header-logo {
+  @apply w-10 h-10;
+}
+
+.header-title {
+  @apply text-blue-600 font-medium text-lg;
+}

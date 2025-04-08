@@ -1,0 +1,11 @@
+.main-button-container {
+  @apply bg-white shadow-lg rounded-b-2xl px-6 py-3 mx-auto w-fit;
+}
+
+.main-button {
+  @apply bg-royalBlue text-white px-4 py-3 rounded-full;
+}
+
+.main-button:hover {
+  @apply bg-blue-700;
+}

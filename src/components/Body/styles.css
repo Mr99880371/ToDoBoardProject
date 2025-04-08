@@ -1,0 +1,40 @@
+.board-container {
+    @apply flex-1 relative justify-center min-h-screen p-4;
+  }
+  
+.board-scroll {
+  @apply mt-20 overflow-x-auto scroll-smooth w-full;
+  display: flex;
+  justify-content: start;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.board-scroll::-webkit-scrollbar {
+  @apply hidden;
+  }
+  
+.board-column {
+    @apply w-64 bg-white p-4 rounded-lg shadow-md;
+  }
+  
+.scroll-button-right {
+    @apply bg-white p-2 rounded-full border-none cursor-pointer;
+  } 
+  
+.scroll-button-left {
+    @apply bg-gray-200 p-2 rounded-full border-none cursor-pointer;
+  }
+  
+.scroll-button svg {
+    @apply w-6 h-6 text-gray-600;
+  }
+  
+.scroll-left {
+    @apply left-2;
+  }
+  
+.scroll-right {
+    @apply right-2;
+  }
+  

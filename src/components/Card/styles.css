@@ -1,0 +1,24 @@
+.card-container {
+    @apply relative bg-white shadow-md rounded-2xl p-4 mb-4 cursor-pointer hover:shadow-lg transition-shadow;
+  }
+  
+  .card-title {
+    @apply text-lg text-left mt-4 font-semibold text-gray-800 mb-1;
+  }
+  
+  .card-description {
+    @apply text-sm text-left text-gray-600 mb-2;
+  }
+  
+  .card-responsibles {
+    @apply flex flex-wrap gap-2 mt-3;
+  }
+  
+  .responsible-tag {
+    @apply bg-blue-500 text-white text-sm px-3 py-1 rounded-full;
+  }
+  
+  .due-date-tag {
+    @apply text-xs font-medium px-3 py-1 rounded-full inline-block;
+  }
+  
