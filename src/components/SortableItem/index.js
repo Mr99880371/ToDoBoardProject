@@ -3,7 +3,7 @@ import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import Card from '../Card';
 
-export default function SortableItem({ task, index, columnId, onDeleteTask, onEditTask, activeTask }) {
+export default function SortableItem({ task, index, columnId, onDeleteTask, onEditTask, activeTask, onClick }) {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({
     id: task.id,
     data: { sortable: { containerId: columnId, index } },
@@ -27,7 +27,7 @@ export default function SortableItem({ task, index, columnId, onDeleteTask, onEd
         dueDate={task.dueDate}
         responsibles={task.responsibles}
         status={task.status}
-        onClick={() => console.log(`Abrir detalhes do card ${task.title}`)}
+        onClick={() => onClick(task.id)}
         onDelete={() => onDeleteTask(columnId, index)}
         onEdit={() => onEditTask(task)}
       />

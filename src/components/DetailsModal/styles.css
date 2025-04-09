@@ -1,0 +1,24 @@
+.details-modal-overlay {
+  @apply fixed inset-0 bg-black/30 flex justify-center items-center z-50 px-4 py-12;
+}
+
+.details-modal-content {
+  @apply bg-white rounded-2xl p-8 w-[700px] max-w-full relative;
+}
+  
+.details-modal-close {
+  @apply absolute -top-12 left-1/2 -translate-x-1/2 bg-white rounded-full w-10 h-10 flex justify-center items-center shadow-md border-none cursor-pointer text-xl;
+}
+  
+.details-modal-title {
+  @apply text-xl font-semibold text-gray-800 text-left;
+}
+  
+.details-modal-subtitle {
+  @apply text-sm text-gray-500 mb-4 text-left;
+}
+  
+.details-modal-text {
+  @apply bg-gray-100 p-4 rounded-xl mt-4 text-left text-gray-700;
+}
+  

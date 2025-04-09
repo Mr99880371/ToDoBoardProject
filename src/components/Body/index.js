@@ -14,6 +14,7 @@ import {
 } from '@dnd-kit/core';
 import { arrayMove } from '@dnd-kit/sortable';
 import Card from '../Card';
+import DetailsModal from '../DetailsModal';
 
 export default function Body() {
   const containerRef = useRef(null);
@@ -22,6 +23,8 @@ export default function Body() {
   const [taskToEdit, setTaskToEdit] = useState(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const [detailsModalOpen, setDetailsModalOpen] = useState(false);
+const [selectedTaskId, setSelectedTaskId] = useState(null);
 
   const [columns, setColumns] = useState(() => {
     const saved = localStorage.getItem("toDo-columns");
@@ -74,9 +77,20 @@ export default function Body() {
   };
 
   const handleOpenModal = () => setIsOpen(true);
+
   const handleCloseModal = () => {
     setIsOpen(false);
     setTaskToEdit(null);
+  };
+
+  const handleOpenDetailsModal = (taskId) => {
+    setSelectedTaskId(taskId);
+    setDetailsModalOpen(true);
+  };
+  
+  const handleCloseDetailsModal = () => {
+    setDetailsModalOpen(false);
+    setSelectedTaskId(null);
   };
 
   const handleAddTask = (newTask) => {
@@ -138,7 +152,7 @@ export default function Body() {
 
   const handleDragEnd = (event) => {
     const { active, over } = event;
-    if (!over || active.id === over.id) return;
+    if (!active || !over) return;
 
     const sourceContainer = active.data.current?.sortable?.containerId;
     const destinationContainer = over.data.current?.sortable?.containerId;
@@ -182,6 +196,15 @@ export default function Body() {
         />
 
       )}
+      {detailsModalOpen && selectedTaskId && (
+        <DetailsModal
+          id={selectedTaskId}
+          modalOpen={detailsModalOpen}
+          onClose={handleCloseDetailsModal}
+          status={activeTask?.status}
+          dueDate={activeTask?.dueDate}
+        />
+      )}
       <div className="board-container relative">
         <div className="absolute right-4 flex gap-2 z-20">
           <button
@@ -209,10 +232,10 @@ export default function Body() {
             className="board-scroll"
           >
             <div className="flex gap-8 min-w-fit mx-auto px-8">
-              <Columns columnId="ideias" title="Idéias" tasks={columns.ideias} onDeleteTask={handleDeleteTask} onEditTask={handleEdit} activeTask={activeTask} />
-              <Columns columnId="a-fazer" title="A fazer" tasks={columns["a-fazer"]} onDeleteTask={handleDeleteTask} onEditTask={handleEdit} activeTask={activeTask} />
-              <Columns columnId="fazendo" title="Fazendo" tasks={columns.fazendo} onDeleteTask={handleDeleteTask} onEditTask={handleEdit} activeTask={activeTask} />
-              <Columns columnId="feito" title="Feito" tasks={columns.feito} onDeleteTask={handleDeleteTask} onEditTask={handleEdit} activeTask={activeTask} />
+              <Columns columnId="ideias" title="Idéias" tasks={columns.ideias} onDeleteTask={handleDeleteTask} onEditTask={handleEdit} activeTask={activeTask} handleOpenDetailsModal={handleOpenDetailsModal} />
+              <Columns columnId="a-fazer" title="A fazer" tasks={columns["a-fazer"]} onDeleteTask={handleDeleteTask} onEditTask={handleEdit} activeTask={activeTask} handleOpenDetailsModal={handleOpenDetailsModal} />
+              <Columns columnId="fazendo" title="Fazendo" tasks={columns.fazendo} onDeleteTask={handleDeleteTask} onEditTask={handleEdit} activeTask={activeTask} handleOpenDetailsModal={handleOpenDetailsModal} />
+              <Columns columnId="feito" title="Feito" tasks={columns.feito} onDeleteTask={handleDeleteTask} onEditTask={handleEdit} activeTask={activeTask} handleOpenDetailsModal={handleOpenDetailsModal} />
             </div>
           </div>
 

@@ -30,6 +30,8 @@ export default function Card({
     const { formattedDate, statusText, colorClass, isOverdue } = 
       getDueDateInfo(dueDate);
 
+      console.log("Card renderizado com ID:", id);
+
     const isDone = status === "feito";
     const prazoLabel = isDone
      ? (isOverdue ? "Fora do prazo"

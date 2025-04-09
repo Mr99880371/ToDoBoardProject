@@ -1,12 +1,32 @@
-import { format, differenceInCalendarDays, isBefore } from "date-fns";
+import { format, isBefore, isToday, isValid, differenceInCalendarDays } from "date-fns";
 
 export function getDueDateInfo(dueDate: string) {
-  const today = new Date();
+  if (!dueDate) {
+    return {
+      formattedDate: "Sem data",
+      statusText: "Sem data",
+      colorClass: "text-gray-400",
+      isOverdue: false,
+      daysDiff: null,
+    };
+  }
+
   const due = new Date(dueDate);
+  if (!isValid(due)) {
+    return {
+      formattedDate: "Data inválida",
+      statusText: "Data inválida",
+      colorClass: "text-gray-400",
+      isOverdue: false,
+      daysDiff: null,
+    };
+  }
+
+  const today = new Date();
   const formattedDate = format(due, "dd/MM");
 
   const daysDiff = differenceInCalendarDays(due, today);
-  const isOverdue = isBefore(due, today);
+  const isOverdue = isBefore(due, today) && !isToday(due);
 
   let statusText = "";
   let colorClass = "";

@@ -20,9 +20,10 @@ type ColumnsProps = {
   onDeleteTask: (columnId: string, index: number) => void;
   onEditTask: (task: Task) => void;
   activeTask: Task | null;
+  handleOpenDetailsModal: (taskId: string) => void;
 };
 
-export default function Columns({ columnId, title, tasks, onDeleteTask, onEditTask, activeTask }: ColumnsProps) {
+export default function Columns({ columnId, title, tasks, onDeleteTask, onEditTask, activeTask, handleOpenDetailsModal }: ColumnsProps) {
 
   const { setNodeRef } = useDroppable({
     id: columnId,
@@ -53,6 +54,7 @@ export default function Columns({ columnId, title, tasks, onDeleteTask, onEditTa
                 onDeleteTask={onDeleteTask}
                 onEditTask={onEditTask}
                 activeTask={activeTask}
+                onClick={handleOpenDetailsModal}
               />
             ))
           ) : (
