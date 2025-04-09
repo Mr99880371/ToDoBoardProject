@@ -206,7 +206,7 @@ const [selectedTaskId, setSelectedTaskId] = useState(null);
         />
       )}
       <div className="board-container relative">
-        <div className="absolute right-4 flex gap-2 z-20">
+        <div className="board-buttons">
           <button
             onClick={scrollLeft}
             className={`p-2 rounded-full transition-colors duration-300 shadow ${
