@@ -2,8 +2,6 @@
 
 A _Kanban_ style task manager with drag-and-drop support, dynamic modals, and modern styling with TailwindCSS.
 
-![App Preview](./preview.png)
-
 ---
 
 ## 🚀 Features
@@ -25,7 +23,7 @@ A _Kanban_ style task manager with drag-and-drop support, dynamic modals, and mo
 - [Tailwind CSS](https://tailwindcss.com/)
 - [@dnd-kit](https://dndkit.com/)
 - [Storybook](https://storybook.js.org/)
-- [TypeScript](https://www.typescriptlang.org/) _(partial)_
+- [TypeScript](https://www.typescriptlang.org/)
 
 ---
 
