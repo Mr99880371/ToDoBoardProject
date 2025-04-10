@@ -16,10 +16,8 @@ export default function DetailsModal({ id, modalOpen, onClose, status }) {
         const response = await fetch("https://api.npoint.io/21c80c25ed65b6f3484f");
         const data = await response.json();
     
-        // Transforma ID do card em número (1, 2, 3...)
         const cardIndex = Number(id) - 1;
     
-        // Garante que mesmo com mais cards que dados, os dados se repitam circularmente
         const mappedTask = data[cardIndex % data.length];
     
         setTimeout(() => {
@@ -38,8 +36,6 @@ export default function DetailsModal({ id, modalOpen, onClose, status }) {
   
     fetchTaskDetails();
   }, [modalOpen, id]);
-
-  console.log(taskData);
 
   const { statusText, colorClass, isOverdue } = getDueDateInfo(taskData?.date);
   const isDone = status === "feito";

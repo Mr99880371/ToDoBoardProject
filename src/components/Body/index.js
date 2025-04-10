@@ -105,7 +105,6 @@ const [selectedTaskId, setSelectedTaskId] = useState(null);
   };
 
   const handleEditTask = (updatedTask) => {
-    console.log("Recebido para editar:", updatedTask);
     setColumns(prevColumns => {
       const newColumns = { ...prevColumns };
       for (const columnId in newColumns) {

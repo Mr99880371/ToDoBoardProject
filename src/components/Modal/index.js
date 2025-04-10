@@ -22,7 +22,7 @@ export default function Modal({ isOpen, onClose, addTask, taskToEdit, onEdit }) 
       setResponsibles([]);
       setDueDate("");
     }
-    console.log('meus dados', taskToEdit);
+
   }, [isOpen, taskToEdit]);
   
   if (!isOpen) return null;
@@ -55,8 +55,6 @@ export default function Modal({ isOpen, onClose, addTask, taskToEdit, onEdit }) 
         status: normalizedStatus,
         id: taskToEdit?.id || Date.now(),
       };
-
-      console.log("🧪 Submetendo tarefa:", newTask);
   
       if (taskToEdit && onEdit) {
         onEdit(newTask); 

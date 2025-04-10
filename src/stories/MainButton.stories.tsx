@@ -15,7 +15,7 @@ type Story = StoryObj<typeof MainButton>;
 export const Default: Story = {
   args: {
     label: 'Clique aqui',
-    onClick: () => console.log('Botão clicado!'),
+    onClick: () => {},
   },
 };
 
@@ -23,6 +23,6 @@ export const Primary: Story = {
   args: {
     label: 'Clique aqui',
     primary: true,
-    onClick: () => console.log('Botão clicado!'),
+    onClick: () => {},
   },
 };
