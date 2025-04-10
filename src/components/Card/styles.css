@@ -1,6 +1,10 @@
 .card-container {
     @apply relative bg-white shadow-md rounded-2xl p-4 mb-4 cursor-pointer hover:shadow-lg transition-shadow;
   }
+
+  .card-buttons {
+    @apply absolute top-2 right-2 flex items-center gap-2 z-10;
+  }
   
   .card-title {
     @apply text-lg text-left mt-4 font-semibold text-gray-800 mb-1;
@@ -12,6 +16,10 @@
   
   .card-responsibles {
     @apply flex flex-wrap gap-2 mt-3;
+  }
+
+  .card-dueDate {
+    @apply flex justify-between items-center border border-dashed rounded-full px-4 py-1 text-sm mt-4;
   }
   
   .responsible-tag {

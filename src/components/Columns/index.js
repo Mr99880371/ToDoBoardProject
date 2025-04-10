@@ -58,7 +58,7 @@ export default function Columns({ columnId, title, tasks, onDeleteTask, onEditTa
               />
             ))
           ) : (
-            <div className="text-gray-500 text-left text-sm italic mb-3">Nenhuma tarefa</div>
+            <div className="column-no-task">Nenhuma tarefa</div>
           )}
         </div>
       </SortableContext>

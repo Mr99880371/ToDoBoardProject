@@ -1,16 +1,21 @@
 .column-container {
-    @apply flex flex-col bg-gray-100 p-4 rounded-lg shadow-md w-80 min-w-[18rem] h-fit;
-  }
+  @apply flex flex-col bg-gray-100 p-4 rounded-lg shadow-md w-80 min-w-[18rem] h-fit;
+}
   
-  .column-title {
-    @apply text-xl text-left font-bold mb-2;
-  }
+.column-title {
+  @apply text-xl text-left font-bold mb-2;
+}
   
-  .column-subtitle {
-    @apply text-gray-500 text-left text-sm italic mb-3;
-  }
+.column-subtitle {
+  @apply text-gray-500 text-left text-sm italic mb-3;
+}
   
-  .column-content {
-    @apply flex flex-col;
-  }
+.column-content {
+  @apply flex flex-col;
+}
+
+.column-no-task {
+  @apply text-gray-500 text-left text-sm italic mb-3;
+}
+  
   

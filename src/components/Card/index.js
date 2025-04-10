@@ -53,7 +53,7 @@ export default function Card({
       onClick={onClick}
     >
       
-      <div className="absolute top-2 right-2 flex items-center gap-2 z-10">
+      <div className="card-buttons">
         {onEdit && (
           <button
             className="p-1 text-gray-400 hover:text-blue-500"
@@ -79,7 +79,7 @@ export default function Card({
       <h3 className="card-title">{title}</h3>
       <p className="card-description">{description}</p>
 
-      <div className="flex justify-between items-center border border-dashed rounded-full px-4 py-1 text-sm mt-4">
+      <div className="card-dueDate">
         <span className="text-gray-500">Data limite: {formattedDate}</span>
         <span className={clsx("ml-2 font-medium", prazoColor)}>{prazoLabel}</span>
       </div>

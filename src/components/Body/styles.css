@@ -19,7 +19,7 @@
 }
   
 .board-column {
-    @apply w-64 bg-white p-4 rounded-lg shadow-md;
+    @apply flex gap-8 min-w-fit mx-auto px-8;
   }
   
 .scroll-button-right {

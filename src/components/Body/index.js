@@ -231,7 +231,7 @@ const [selectedTaskId, setSelectedTaskId] = useState(null);
             ref={containerRef}
             className="board-scroll"
           >
-            <div className="flex gap-8 min-w-fit mx-auto px-8">
+            <div className="board-column">
               <Columns columnId="ideias" title="Idéias" tasks={columns.ideias} onDeleteTask={handleDeleteTask} onEditTask={handleEdit} activeTask={activeTask} handleOpenDetailsModal={handleOpenDetailsModal} />
               <Columns columnId="a-fazer" title="A fazer" tasks={columns["a-fazer"]} onDeleteTask={handleDeleteTask} onEditTask={handleEdit} activeTask={activeTask} handleOpenDetailsModal={handleOpenDetailsModal} />
               <Columns columnId="fazendo" title="Fazendo" tasks={columns.fazendo} onDeleteTask={handleDeleteTask} onEditTask={handleEdit} activeTask={activeTask} handleOpenDetailsModal={handleOpenDetailsModal} />

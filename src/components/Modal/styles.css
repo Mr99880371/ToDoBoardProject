@@ -33,6 +33,10 @@
   .shields-label {
     @apply block text-sm font-medium text-gray-600 mb-1 text-left;
   }
+
+  .dueDate-container {
+    @apply flex flex-col items-start mb-2;
+  }
   
   .submit-button {
     @apply w-full bg-[#4169e1] text-white font-semibold py-2 rounded-full cursor-pointer transition-colors hover:bg-[#274bb7];

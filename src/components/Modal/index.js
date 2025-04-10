@@ -109,7 +109,7 @@ export default function Modal({ isOpen, onClose, addTask, taskToEdit, onEdit }) 
           }} />
           {errors.responsibles && <p className="error-text">{errors.responsibles}</p>}
 
-          <div className="flex flex-col items-start mb-2">
+          <div className="dueDate-container">
             <label htmlFor="dueDate" className="shields-label">Data limite</label>
             <input
               id="dueDate"
