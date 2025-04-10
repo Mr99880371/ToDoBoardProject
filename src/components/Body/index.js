@@ -121,7 +121,7 @@ export default function Body() {
 
   const handleEdit = (task) => {
     setTaskToEdit(task);
-    setTimeout(() => setIsOpen(true), 0);
+    setTimeout(() => setIsOpen(true), 100);
   };
 
   const handleDeleteTask = (columnId, index) => {
