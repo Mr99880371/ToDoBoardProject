@@ -24,7 +24,7 @@ export default function Body() {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const [detailsModalOpen, setDetailsModalOpen] = useState(false);
-const [selectedTaskId, setSelectedTaskId] = useState(null);
+  const [selectedTaskId, setSelectedTaskId] = useState(null);
 
   const [columns, setColumns] = useState(() => {
     const saved = localStorage.getItem("toDo-columns");
@@ -247,9 +247,9 @@ const [selectedTaskId, setSelectedTaskId] = useState(null);
                 dueDate={activeTask.dueDate}
                 responsibles={activeTask.responsibles}
                 status={activeTask.status}
-                onClick={() => {}}
-                onDelete={() => {}}
-                onEdit={() => {}}
+                onClick={() => handleOpenDetailsModal(activeTask.id)}
+                onDelete={() => handleDeleteTask(activeTask.id)}
+                onEdit={() => handleEdit(activeTask)}
               />
             ) : null}
           </DragOverlay>
