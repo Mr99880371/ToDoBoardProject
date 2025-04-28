@@ -1,5 +1,5 @@
 .board-container {
-    @apply flex-1 relative justify-center min-h-screen p-4;
+  @apply flex-1 relative justify-center min-h-screen p-4;
 }
 
 .board-buttons {
