@@ -73,6 +73,10 @@ Add new columns or states in the Body and Columns files.
 
 ---
 
+## 🌉 Design
+
+Figma: https://www.figma.com/design/Kew8NFFejpS37e18Q4BwRP/Teste-frontend?node-id=0-1
+
 ## 🧑‍🎓 Developed by
 
 Mariane A Justino
